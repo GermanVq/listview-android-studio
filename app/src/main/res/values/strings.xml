@@ -16,10 +16,14 @@
     <string name="cubo">Cubo</string>
     <string name="calcular">Calcular</string>
     <string name="borrar">Borran</string>
-    <string name="lista_operacio">Lista Operaciones</string>
+    <string name="lista_operacion">Lista Operaciones</string>
     <string name="op_realizada">Operaciones realizadas</string>
     <string name="calcular_area">Calcular area</string>
     <string name="calcular_volumen">Calcular volumen</string>
+    <string name="no">No</string>
+    <string name="operacion">Operación</string>
+    <string name="dato">Datos</string>
+    <string name="resultado">Resultado</string>
 
     <string-array name="opciones_ar_vol">
         <item>@string/area</item>
