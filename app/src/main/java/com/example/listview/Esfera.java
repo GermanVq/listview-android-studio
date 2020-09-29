@@ -46,7 +46,7 @@ public class Esfera extends AppCompatActivity {
             res = total.getText().toString();
             d = new Operacion(op, dt, res);
             d.guardar();
-            Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.volumen_guardado), Toast.LENGTH_LONG).show();
         }
     }
     public boolean Validar(){
