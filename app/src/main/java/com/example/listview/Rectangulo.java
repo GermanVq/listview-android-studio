@@ -34,6 +34,7 @@ public class Rectangulo extends AppCompatActivity {
         total.setText("");
         base.requestFocus();
     }
+
     public void guardar(View v){
         String op, dt, res;
         Operacion d;
@@ -45,4 +46,5 @@ public class Rectangulo extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
 
     }
+
 }

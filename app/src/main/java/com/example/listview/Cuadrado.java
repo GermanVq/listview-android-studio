@@ -19,12 +19,16 @@ private TextView total, dato, tipo_op;
         total = findViewById(R.id.lblResultado);
         dato = findViewById(R.id.lblDato);
         tipo_op = findViewById(R.id.txtCuadrado);
+
     }
+
     public void calcular(View v){
         int ldo, area;
-        ldo = Integer.parseInt(lado.getText().toString());
-        area = ldo * ldo;
-        total.setText(""+area);
+        if(Validar()) {
+            ldo = Integer.parseInt(lado.getText().toString());
+            area = ldo * ldo;
+            total.setText("" + area);
+        }
     }
     public void limpiar(View v){
         lado.setText("");
@@ -34,6 +38,7 @@ private TextView total, dato, tipo_op;
     public void guardar(View v){
         String op, dt, res;
         Operacion d;
+
         op = tipo_op.getText().toString();
         dt = dato.getText().toString();
         res = total.getText().toString();
@@ -41,6 +46,13 @@ private TextView total, dato, tipo_op;
         d.guardar();
         Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
 
+    }
+    public boolean Validar(){
+        if(lado.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 
 }
