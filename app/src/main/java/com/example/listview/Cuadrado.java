@@ -10,22 +10,21 @@ import android.widget.Toast;
 
 public class Cuadrado extends AppCompatActivity {
 private EditText lado;
-private TextView total, dato, tipo_op;
+private TextView total;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuadrado);
         lado = findViewById(R.id.txtLado);
         total = findViewById(R.id.lblResultado);
-        dato = findViewById(R.id.lblDato);
-        tipo_op = findViewById(R.id.txtCuadrado);
+
 
     }
 
     public void calcular(View v){
-        int ldo, area;
+        Double ldo, area;
         if(Validar()) {
-            ldo = Integer.parseInt(lado.getText().toString());
+            ldo = Double.parseDouble(lado.getText().toString());
             area = ldo * ldo;
             total.setText("" + area);
         }
@@ -39,7 +38,7 @@ private TextView total, dato, tipo_op;
         String op, dt, res;
         Operacion d;
         if(ValidarG()) {
-            op = getString(R.string.area)+" "+tipo_op.getText().toString();
+            op = getString(R.string.area)+" "+getString(R.string.cuadrado);
             dt = getString(R.string.lado)+ ": " + lado.getText().toString();
             res = total.getText().toString();
             d = new Operacion(op, dt, res);

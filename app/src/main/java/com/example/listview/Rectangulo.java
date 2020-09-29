@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class Rectangulo extends AppCompatActivity {
     private EditText base, altura;
-    private TextView total, dato, tipo_op;
+    private TextView total;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,15 +18,13 @@ public class Rectangulo extends AppCompatActivity {
         base = findViewById(R.id.txtLado);
         altura = findViewById(R.id.txtAltura);
         total = findViewById(R.id.lblResultado);
-        dato = findViewById(R.id.lblDato);
-        tipo_op = findViewById(R.id.txtRectangulo);
     }
     public void calcular(View v){
-        int b, h, area;
+        Double b, h, area;
         if(Validar()) {
 
-            b = Integer.parseInt(base.getText().toString());
-            h = Integer.parseInt(altura.getText().toString());
+            b = Double.parseDouble(base.getText().toString());
+            h = Double.parseDouble(altura.getText().toString());
             area = b * h;
             total.setText("" + area);
         }
@@ -43,7 +41,7 @@ public class Rectangulo extends AppCompatActivity {
         Operacion d;
 
         if(ValidarG()) {
-            op = getString(R.string.area)+" "+tipo_op.getText().toString();
+            op = getString(R.string.area)+" "+getString(R.string.rectangulo);
             dt = getString(R.string.altura)+ ": " + altura.getText().toString() +"\n"+
                     getString(R.string.base)+ ": " + base.getText().toString();
             res = total.getText().toString();

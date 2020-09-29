@@ -45,7 +45,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:gravity="center"
-            android:inputType="number" />
+            android:inputType="number|numberDecimal" />
 
         <TextView
             android:id="@+id/textView9"
@@ -63,7 +63,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:gravity="center"
-            android:inputType="number" />
+            android:inputType="number|numberDecimal" />
     </LinearLayout>
 
     <LinearLayout
@@ -96,12 +96,6 @@
             android:onClick="guardar"
             android:text="@string/guardar" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/lblDato"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/lado" />
 
     <TextView
         android:id="@+id/textView12"

@@ -20,11 +20,11 @@ public class Triangulo extends AppCompatActivity {
         total = findViewById(R.id.lblResultado);
     }
     public void calcular(View v){
-        int b, h, area;
+        double b, h, area;
         if(Validar()) {
 
-            b = Integer.parseInt(base.getText().toString());
-            h = Integer.parseInt(altura.getText().toString());
+            b = Double.parseDouble(base.getText().toString());
+            h = Double.parseDouble(altura.getText().toString());
             area = (b * h) / 2;
             total.setText("" + area);
         }
