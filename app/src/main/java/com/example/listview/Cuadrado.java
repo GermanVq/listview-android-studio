@@ -38,18 +38,29 @@ private TextView total, dato, tipo_op;
     public void guardar(View v){
         String op, dt, res;
         Operacion d;
-
-        op = tipo_op.getText().toString();
-        dt = dato.getText().toString();
-        res = total.getText().toString();
-        d = new Operacion(op, dt,res);
-        d.guardar();
-        Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
-
+        if(ValidarG()) {
+            op = tipo_op.getText().toString();
+            dt = dato.getText().toString();
+            res = total.getText().toString();
+            d = new Operacion(op, dt, res);
+            d.guardar();
+            Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
+        }
     }
     public boolean Validar(){
         if(lado.getText().toString().isEmpty()){
-            Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.error_calcular), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
+    public boolean ValidarG(){
+        if(lado.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_guardar), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(total.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_guardar), Toast.LENGTH_LONG).show();
             return false;
         }
         return true;
