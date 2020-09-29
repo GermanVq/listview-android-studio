@@ -26,7 +26,24 @@ public class CalculoVolumen extends AppCompatActivity {
         lst_opciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
+                switch (position){
+                    case 0:
+                        intent = new Intent(CalculoVolumen.this, Esfera.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent = new Intent(CalculoVolumen.this, Cilindro.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(CalculoVolumen.this, Cono.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(CalculoVolumen.this, Cubo.class);
+                        startActivity(intent);
+                        break;
+                }
             }
         });
     }
