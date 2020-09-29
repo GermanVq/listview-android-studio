@@ -24,7 +24,7 @@
     <string name="operacion">Operación</string>
     <string name="dato">Datos</string>
     <string name="resultado">Resultado</string>
-    <string name="lado">Lado:</string>
+    <string name="lado">Lado</string>
     <string name="guardar">Guardar</string>
     <string name="area_guardada">Área guardada</string>
     <string name="error_calcular">No se pudo calcular porfavor ingresar campos necesarios</string>

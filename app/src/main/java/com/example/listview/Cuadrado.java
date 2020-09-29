@@ -39,8 +39,8 @@ private TextView total, dato, tipo_op;
         String op, dt, res;
         Operacion d;
         if(ValidarG()) {
-            op = tipo_op.getText().toString();
-            dt = dato.getText().toString();
+            op = getString(R.string.area)+" "+tipo_op.getText().toString();
+            dt = getString(R.string.lado)+ ": " + lado.getText().toString();
             res = total.getText().toString();
             d = new Operacion(op, dt, res);
             d.guardar();

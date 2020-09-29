@@ -23,10 +23,13 @@ public class Rectangulo extends AppCompatActivity {
     }
     public void calcular(View v){
         int b, h, area;
-        b = Integer.parseInt(base.getText().toString());
-        h = Integer.parseInt(altura.getText().toString());
-        area = b * h;
-        total.setText(""+area);
+        if(Validar()) {
+
+            b = Integer.parseInt(base.getText().toString());
+            h = Integer.parseInt(altura.getText().toString());
+            area = b * h;
+            total.setText("" + area);
+        }
     }
     public void limpiar(View v){
         base.setText("");
@@ -38,13 +41,43 @@ public class Rectangulo extends AppCompatActivity {
     public void guardar(View v){
         String op, dt, res;
         Operacion d;
-        op = tipo_op.getText().toString();
-        dt = dato.getText().toString();
-        res = total.getText().toString();
-        d = new Operacion(op, dt,res);
-        d.guardar();
-        Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
 
+        if(ValidarG()) {
+            op = getString(R.string.area)+" "+tipo_op.getText().toString();
+            dt = getString(R.string.altura)+ ": " + altura.getText().toString() +"\n"+
+                    getString(R.string.base)+ ": " + base.getText().toString();
+            res = total.getText().toString();
+            d = new Operacion(op, dt, res);
+            d.guardar();
+            Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
+        }
     }
+    public boolean Validar(){
+        if(base.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_calcular), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(altura.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_calcular), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
+    public boolean ValidarG(){
+        if(base.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_guardar), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(altura.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_guardar), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(total.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_guardar), Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
+
 
 }
