@@ -29,7 +29,7 @@
     <string name="area_guardada">Área guardada</string>
     <string name="volumen_guardado">Volumen guardado</string>
     <string name="error_calcular">No se pudo calcular porfavor ingresar campos necesarios</string>
-    <string name="error_guardar">No se pudo guardar porfavor ingresar campos necesarios</string>
+    <string name="error_guardar">"No se pudo guardar, ingrese los campos obligatorios"</string>
     <string name="radio">Radio</string>
     <string name="area_base">Área base</string>
 
