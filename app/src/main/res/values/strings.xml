@@ -31,6 +31,7 @@
     <string name="error_calcular">No se pudo calcular porfavor ingresar campos necesarios</string>
     <string name="error_guardar">No se pudo guardar porfavor ingresar campos necesarios</string>
     <string name="radio">Radio</string>
+    <string name="area_base">Área base</string>
 
     <string-array name="opciones_ar_vol">
         <item>@string/area</item>
