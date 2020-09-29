@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">ListView</string>
     <string name="opcion_area_volumen">Opciones</string>
-    <string name="area">Area</string>
+    <string name="area">Área</string>
     <string name="volumen">Volumen</string>
     <string name="cuadrado">Cuadrado</string>
     <string name="rectangulo">Rectangulo</string>
-    <string name="triangulo">Triangulo</string>
+    <string name="triangulo">Triángulo</string>
     <string name="circulo">Circulo</string>
     <string name="valor">Valor del lado</string>
     <string name="base">Base</string>
@@ -26,7 +26,7 @@
     <string name="resultado">Resultado</string>
     <string name="lado">Lado:</string>
     <string name="guardar">Guardar</string>
-    <string name="area_guardada">Area guardada</string>
+    <string name="area_guardada">Área guardada</string>
 
     <string-array name="opciones_ar_vol">
         <item>@string/area</item>

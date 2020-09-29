@@ -11,15 +11,15 @@ import java.util.ArrayList;
 
 public class ListaOperacion extends AppCompatActivity {
     private TableLayout tabla;
-    private ArrayList<AreaCuadrado> areaCuadrados;
+    private ArrayList<Operacion> operaciones;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_operacion);
         tabla = findViewById(R.id.tblOpercaciones);
-        areaCuadrados = Datos.obtenerAC();
+       operaciones = Datos.obtener();
 
-        for (int i = 0; i < areaCuadrados.size(); i++) {
+        for (int i = 0; i < operaciones.size(); i++) {
             TableRow fila = new TableRow(this);
 
             TextView columna_uno = new TextView(this);
@@ -28,9 +28,9 @@ public class ListaOperacion extends AppCompatActivity {
             TextView columna_cuatro = new TextView(this);
 
             columna_uno.setText(""+(i+1));
-            columna_dos.setText(areaCuadrados.get(i).getOperacion());
-            columna_tres.setText(areaCuadrados.get(i).getDato());
-            columna_cuatro.setText(areaCuadrados.get(i).getLado());
+            columna_dos.setText(operaciones.get(i).getOperacion());
+            columna_tres.setText(operaciones.get(i).getDato());
+            columna_cuatro.setText(operaciones.get(i).getResultado());
 
             fila.addView(columna_uno);
             fila.addView(columna_dos);

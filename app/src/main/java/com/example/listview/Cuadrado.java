@@ -33,12 +33,12 @@ private TextView total, dato, tipo_op;
     }
     public void guardar(View v){
         String op, dt, res;
-        AreaCuadrado c;
+        Operacion d;
         op = tipo_op.getText().toString();
         dt = dato.getText().toString();
         res = total.getText().toString();
-        c = new AreaCuadrado(op, dt,res);
-        c.guardarAC();
+        d = new Operacion(op, dt,res);
+        d.guardar();
         Toast.makeText(this, getString(R.string.area_guardada), Toast.LENGTH_LONG).show();
 
     }

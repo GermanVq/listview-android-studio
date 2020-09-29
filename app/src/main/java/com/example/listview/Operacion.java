@@ -1,14 +1,14 @@
 package com.example.listview;
 
-public class AreaCuadrado {
+public class Operacion {
     private String operacion;
     private String dato;
-    private String lado;
+    private String resultado;
 
-    public AreaCuadrado(String operacion, String dato, String lado) {
+    public Operacion(String operacion, String dato, String resultado) {
         this.operacion = operacion;
         this.dato = dato;
-        this.lado = lado;
+        this.resultado = resultado;
     }
 
     public String getOperacion() {
@@ -27,14 +27,14 @@ public class AreaCuadrado {
         this.dato = dato;
     }
 
-    public String getLado() {
-        return lado;
+    public String getResultado() {
+        return resultado;
     }
 
-    public void setLado(String lado) {
-        this.lado = lado;
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
     }
-    public void guardarAC(){
-        Datos.guardarAC(this);
+    public void guardar(){
+        Datos.guardar(this);
     }
 }
